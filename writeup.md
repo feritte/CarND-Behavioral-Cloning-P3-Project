@@ -18,9 +18,9 @@ The goals / steps of this project are the following:
 
 [image1]: ./examples/Project3.PNG "Model Code"
 [image2]: ./examples/P3TrainingValidationOutput.PNG "Training and Validation accuracy output"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
+[image3]: ./examples/left_2016_12_01_13_30_48_287.jpg "Left Camera Image"
+[image4]: ./examples/center_2016_12_01_13_30_48_287.jpg "Center Camera Image"
+[image5]: ./examples/right_2016_12_01_13_30_48_287.jpg " Right Image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
 [image7]: ./examples/placeholder_small.png "Flipped Image"
 
@@ -90,23 +90,9 @@ I used the training data provided by Udacity. . I used a combination of center l
 ####1. Solution Design Approach
 
 The overall strategy for deriving a model architecture was to add 3 convolutional layers. 
-For the first convolutional layer, I used 16 filters, 8 X 8 kernals, 4 X 4 strides, and same padding and elu activation For the second convolutional layer, I used 32 filters, 5 X 5 kernals, 2 X 2 strides, and same padding and elu activation For the third convolutional layer, I used 62 filters, 5 X 5 kernals, 2 X 2 strides, and same padding and elu activation. To combat the overfitting, I modified the model so that there is a drobout.
+For the first convolutional layer, I used 16 filters, 8 X 8 kernals, 4 X 4 strides, and same padding and elu activation For the second convolutional layer, I used 32 filters, 5 X 5 kernals, 2 X 2 strides, and same padding and elu activation For the third convolutional layer, I used 62 filters, 5 X 5 kernals, 2 X 2 strides, and same padding and elu activation. 
 
-I split my data into a training set and validation set.
-
-
-
-The overall strategy for deriving a model architecture was to ...
-
-My first step was to use a convolution neural network model similar to the ... I thought this model might be appropriate because ...
-
-In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. 
-
-To combat the overfitting, I modified the model so that ...
-
-Then I ... 
-
-The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track... to improve the driving behavior in these cases, I ....
+In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. To combat the overfitting, I modified the model so that there is a drobout.
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
@@ -124,7 +110,10 @@ To capture good driving behavior, I used the dataset provided by Udacity.
 
 As it is adviced in the introduction of the project, I cropped the images. I realized that not all parts of the image are necessary for driving/steering. Then normalizing the data for a cleaner convergenceis applied. Lastly, I shuffled the data. 95% of the data went into the validation set.
 
-To avoid any offfset, I took all three camera images, and added a correction of 0.2.
+To avoid any offfset, I took all three camera images, and added a correction of 0.2. 3 images taken from the left, the center and the right cameras are given as example below:
+![alt text][image3]
+![alt text][image4]
+![alt text][image5]
 
 The validation set was to diagnose my model, particularly tell whether it had high bias (underfitting) or high variance (overfitting)
 
