@@ -111,6 +111,7 @@ To capture good driving behavior, I used the dataset provided by Udacity.
 As it is adviced in the introduction of the project, I cropped the images. I realized that not all parts of the image are necessary for driving/steering. Then normalizing the data for a cleaner convergenceis applied. Lastly, I shuffled the data. 95% of the data went into the validation set.
 
 To avoid any offfset, I took all three camera images, and added a correction of 0.2. 3 images taken from the left, the center and the right cameras are given as example below:
+
 ![alt text][image3]
 ![alt text][image4]
 ![alt text][image5]
